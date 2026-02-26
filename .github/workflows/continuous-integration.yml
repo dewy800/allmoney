@@ -56,7 +56,7 @@ jobs:
         cp out/windows/Installer.Windows/bin/Release/net472/${{ matrix.runtime }}.sym/* artifacts/bin/${{ matrix.runtime }}/
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: ${{ matrix.runtime }}
         path: |
@@ -100,7 +100,7 @@ jobs:
         mv out/linux/Packaging.Linux/Release/tar/*.tar.gz artifacts/
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: ${{ matrix.runtime }}
         path: |
@@ -145,7 +145,7 @@ jobs:
         mv out/osx/Installer.Mac/pkg/Release/gcm*.pkg artifacts/
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v6
+      uses: actions/upload-artifact@v7
       with:
         name: ${{ matrix.runtime }}
         path: |
